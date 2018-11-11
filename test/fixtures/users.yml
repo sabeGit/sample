@@ -1,4 +1,32 @@
 sabe:
   name: Abe Shintaro
+  alias: sabe_test
   email: sabe@example.com
   password_digest: <%= User.digest('password') %>
+  admin: true
+
+taro:
+  name: test taro
+  alias: taro_test
+  email: duchess@example.gov
+  password_digest: <%= User.digest('password') %>
+
+akio:
+  name: Seki Akio
+  alias: seki_test
+  email: hands@example.gov
+  password_digest: <%= User.digest('password') %>
+
+akira:
+  name: AKIRA
+  alias: akira_test
+  email: boss@example.gov
+  password_digest: <%= User.digest('password') %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name:  <%= "User #{n}" %>
+  alias: <%= "user_#{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>
