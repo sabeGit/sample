@@ -9,6 +9,7 @@
       <%= f.text_field :name_or_mail, class: "form-control", placeholder: "Username or Email" %>
 
       <%= f.label :password %>
+      <%= link_to "(forgot password)", new_password_reset_path %>
       <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
 
       <%= f.label :remember_me, class: "checkbox inline" do %>
